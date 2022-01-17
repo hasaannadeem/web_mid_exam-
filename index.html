@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UCP Mid-1 Registration</title>
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    
+                    <div class="signup-img-content">
+                        <h2>UCP Mid-1 Registration</h2>
+                        <p>Use HTML, CSS & JS</p>
+                    </div>
+                </div>
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="userform" onsubmit="event.preventDefault(); myValidation();">
+                        <div class="form-row">
+                            
+                            <div class="form-group">
+                                <div class="form-input">
+                                    <label for="name" class="required">Name</label>
+                                    <input type="text" name="name" id="name" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="rollno" class="required">Roll Number</label>
+                                    <input type="text" name="rollno" id="rollno" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="email" class="required">Email</label>
+                                    <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="semester">Semester</label>
+                                    <input type="text" name="semester" id="semester" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="section" class="required">Section</label>
+                                    <input type="text" name="section" id="section" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="payment">Select Any Course (Total Marks: 100)</label>
+                                    </div>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="course" checked value="web"> Web
+                                           
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="course" value="web"> OOP
+                                           
+                                        </div>
+                                        <div class="form-radio-item"> 
+                                            <input type="radio" name="course" value="web"> Mobile
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="assign" class="required">Enter Assignment marks (0-10)</label>
+                                    <input type="text" name="assign" id="assign" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="quiz" class="required">Enter Quizes Marks (0-10)</label>
+                                    <input type="text" name="quiz" id="quiz" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="mid" class="required">Enter Mid Exam Marks (0-30)</label>
+                                    <input type="text" name="mid" id="mid" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="final" class="required">Enter Final Exam Marks (0-50)</label>
+                                    <input type="text" name="final" id="final" />
+                                </div>
+                            </div>
+                        </div>
+      
+                        <div class="form-submit">
+                                <div id="message" style="float: left; color: red"></div>
+                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                            <input type="submit" value="Reset" class="submit" id="reset" name="reset" onclick="event.preventDefault(); formRest();"/>
+                        </div>
+                    </form>
+                    <div id="result" class="register-form" style="display:none">
+
+                        <div class="form-group">
+                            <div class="form-input">
+                                <label for="name">Name: </label><span id="resName"></span>
+                            </div>
+                            <div class="form-input">
+                                <label for="rollno">Roll Number: </label><span id="resRollno"></span>
+                            </div>
+                            <div class="form-input">
+                                <label for="email">Email: </label><span id="resEmail"></span>
+                            </div>
+                            <div class="form-input">
+                                <label for="semester">Semester: </label><span id="resSemester"></span>
+                            </div>
+                            <div class="form-input">
+                                <label for="section">Section: </label><span id="resSection"></span>
+                            </div>
+                            <div class="form-input">
+                                    <label for="section">Course: </label><span id="resCourse"></span>
+                            </div>
+                            <div class="form-input">
+                                    <label for="section">Total Marks out of 100: </label><span id="resTotalMarks"></span>
+                            </div>
+                            <div class="form-input">
+                                <label for="section">Status: </label><span id="resStatus"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
